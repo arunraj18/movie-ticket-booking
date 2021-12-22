@@ -1,0 +1,176 @@
+#include<string.h>
+#include<iostream>
+using namespace std;
+char balSeats[2][10];
+char Aseats[2][7];
+char Bseats[2][7];
+void seats()
+{
+	int i=1,a,b,c;
+	for ( i=1;i<3; i++)
+	{
+        	cout<<"|_ BALrows "<<i<<" _ "<<balSeats[i][1];
+		cout<<"_|"<<"_"<<balSeats[i][2];
+		cout<<"_|"<<"_"<<balSeats[i][3];
+		cout<<"_|"<<"_"<<balSeats[i][4];
+		cout<<"_|"<<"_"<<balSeats[i][5];
+		cout<<"_|"<<"_"<<balSeats[i][6];
+		cout<<"_|"<<"_"<<balSeats[i][7];
+		cout<<"_|"<<"_"<<balSeats[i][8];
+		cout<<"_|"<<"_"<<balSeats[i][9];
+		cout<<"_|"<<"_"<<balSeats[i][10];
+		cout<<"_|"<<"_"<<balSeats[i][11];
+		cout<<"_|"<<endl;
+	}
+	for(int j=1;j<3;j++)
+	{
+		cout<<"|_ A rows  "<<j<<" _ "<<Aseats[j][1];
+		cout<<"_|"<<"_"<<Aseats[j][2];
+		cout<<"_|"<<"_"<<Aseats[j][3];
+		cout<<"_|"<<"_"<<Aseats[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Aseats[j][5];
+		cout<<"_|"<<"_"<<Aseats[j][6];
+		cout<<"_|"<<"_"<<Aseats[j][7];
+		cout<<"_|"<<"_"<<Aseats[j][8];
+		cout<<"_|"<<endl;
+	}
+	for(int j=1;j<3;j++)
+	{
+		cout<<"|_ B rows  "<<j<<" _ "<<Bseats[j][1];
+		cout<<"_|"<<"_"<<Bseats[j][2];
+		cout<<"_|"<<"_"<<Bseats[j][3];
+		cout<<"_|"<<"_"<<Bseats[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Bseats[j][5];
+		cout<<"_|"<<"_"<<Bseats[j][6];
+		cout<<"_|"<<"_"<<Bseats[j][7];
+		cout<<"_|"<<"_"<<Bseats[j][8];
+		cout<<"_|"<<endl;
+	}
+	cout<<" input choice position ( type and row and column )"<<endl;
+	cin>>c>>a>>b;
+	if(c==1&&balSeats[a][b]!='1')
+	{
+		balSeats[a][b]='1';
+		cout<<"TICKET COST IS 150/-"<<endl;
+	}
+	else
+	{
+		if(c==2&&Aseats[a][b]!='1')
+		{
+			Aseats[a][b]='1';
+			cout<<"TICKET COST IS 100/-"<<endl;
+		}
+		else
+		{
+			if(c==3&&Bseats[a][b]!='1')
+			{
+				Bseats[a][b]='1';
+				cout<<"TICKET COST IS 80/-"<<endl;
+			}
+			else
+				cout<<endl;
+				cout<<" Warning : position not free. seek another."<<endl;
+		}
+	}
+}
+void read()
+{
+	int i=1,a,b;
+	for ( i=1;i<3; i++)
+	{
+        	cout<<"|_ BALrows "<<i<<" _ "<<balSeats[i][1];
+		cout<<"_|"<<"_"<<balSeats[i][2];
+		cout<<"_|"<<"_"<<balSeats[i][3];
+		cout<<"_|"<<"_"<<balSeats[i][4];
+		cout<<"_|"<<"_"<<balSeats[i][5];
+		cout<<"_|"<<"_"<<balSeats[i][6];
+		cout<<"_|"<<"_"<<balSeats[i][7];
+		cout<<"_|"<<"_"<<balSeats[i][8];
+		cout<<"_|"<<"_"<<balSeats[i][9];
+		cout<<"_|"<<"_"<<balSeats[i][10];
+		cout<<"_|"<<"_"<<balSeats[i][11];
+		cout<<"_|"<<'\n';
+	}
+	for(int j=1;j<3;j++)
+	{
+		 cout<<"|_ A rows  "<<j<<" _ "<<Aseats[j][1];
+		cout<<"_|"<<"_"<<Aseats[j][2];
+		cout<<"_|"<<"_"<<Aseats[j][3];
+		cout<<"_|"<<"_"<<Aseats[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Aseats[j][5];
+		cout<<"_|"<<"_"<<Aseats[j][6];
+		cout<<"_|"<<"_"<<Aseats[j][7];
+		cout<<"_|"<<"_"<<Aseats[j][8];
+		cout<<"_|"<<'\n';
+	}
+	for(int j=1;j<3;j++)
+	{
+		cout<<"|_ B rows  "<<j<<" _ "<<Bseats[j][1];
+		cout<<"_|"<<"_"<<Bseats[j][2];
+		cout<<"_|"<<"_"<<Bseats[j][3];
+		cout<<"_|"<<"_"<<Bseats[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Bseats[j][5];
+		cout<<"_|"<<"_"<<Bseats[j][6];
+		cout<<"_|"<<"_"<<Bseats[j][7];
+		cout<<"_|"<<"_"<<Bseats[j][8];
+		cout<<"_|"<<'\n';
+	}
+}
+int main()
+{
+	int ch,s,n;
+	while(1)
+	{
+		cout<<"screens:\n1.screen1\n2.screen2\n3.screen3"<<endl;
+		cout<<"enter your choice:";
+		cin>>ch;
+	switch(ch)
+	{
+		case 1:	cout<<"movie name:xyz"<<endl;
+			break;
+		case 2: cout<<"movie name:abc"<<endl;
+			break;
+		case 3: cout<<"movie name:klm"<<endl;
+			break;
+		default:_exit(1);
+	}
+	cout<<"show timings:\n1.mrng\n2.noon\n3.nyt"<<endl;
+	cout<<"enter your choice:";
+	cin>>s;
+	cout<<"ticket type:\n1.balcony\n2.Aclass\n3.Bclass"<<endl;
+	for(int a=1;a<3;a++)
+	{
+		for (int b=1; b<12; b++)
+			balSeats[a][b] = '0';
+	}
+	for(int a=1;a<3;a++)
+	{
+		for(int b=1;b<9;b++)
+		{
+			Aseats[a][b]='0';
+			Bseats[a][b]='0';
+		}
+	}
+	bool choice = 1;
+	while (choice==true)
+	{
+		seats();
+		cout<< "Would like to choose another seat?(Please choose only 1 or 0)" <<endl;
+		cout<< "(1) Yes" <<endl;
+		cout<< "(0) No" <<endl;
+		cin>>choice;
+			if (choice==0)
+				break;
+	}
+	read();
+	}
+	return 0;
+}
